@@ -2,12 +2,12 @@
 This hook has the same syntax as the `useEffect` hook but most of the time you will not use this hook and the `useEffect` hook will be more than enough for most of the cases
 
 #### The syntax
-```javascript=
+```js
 useLayoutEffect(cbFunction, [dependencies])
 ```
 
 Example
-```javascript=
+```js
 useLayoutEffect(()=> {
   //...do some side effects
   //BUT do this before browser painting the UI
@@ -38,7 +38,7 @@ The steps when running **useLayoutEffect**:
 React hooks will always be fired based on their [order](https://reactjs.org/docs/hooks-rules.html#explanation).
 so if we have multiple useEffect it will run the first one then the second and so on.
 
-```javascript=
+```js
 useEffect(()=> {
   console.log("First");
 });
@@ -50,7 +50,7 @@ useEffect(()=> {
 
 but in case that we had useLayoutEffect with useEffect then watch what will happen with this one
 
-```javascript=
+```js
 useEffect(()=> {
   console.log("First");
 });
@@ -64,6 +64,8 @@ useLayoutEffect(()=> {
 
 Most of the time you don't need to use useLayoutEffect unless you are doing heavy dom mutations, scroll, styles, and animations, but always start with useEffect and then if you saw some flickering or some weird animation behaviour then try useLayoutEffect.
 
+---
+
 #### React hooks flow diagram
 This diagram shows you React hook flow and which one fires before the other. ([original repo](https://github.com/donavon/hook-flow))
 
@@ -71,6 +73,7 @@ https://raw.githubusercontent.com/donavon/hook-flow/master/hook-flow.png
 
 ![](https://i.imgur.com/RcuMh1H.png)
 
+---
 
 #### Resources
 I recommend going through these resources and examples
