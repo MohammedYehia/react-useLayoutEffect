@@ -15,7 +15,9 @@ useLayoutEffect(()=> {
 ```
 
 #### useEffect vs useLayoutEffect
-**useLayoutEffect**: runs *`synchronously`* after the DOM mutations but before the browser paints the screen
+
+**useLayoutEffect**: runs *`synchronously`* after the DOM mutations but before the browser paints the screen.
+
 **useEffect**: runs *`asynchronously`* after the DOM mutaions and after painting the screen.
 
 The steps when running **useEffect**:
